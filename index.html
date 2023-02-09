@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="cards">
+      <picture>
+        <source srcset="images\bg-main-desktop.png">
+        <img src="./images/bg-main-desktop.png" alt="background image">
+      </picture><!--gradient picture-->
+      <div class="front">
+        <img src="./images/bg-card-front.png" alt="card front">
+        <img id="card-logo" src="./images/card-logo.svg" alt="card logo">
+        <div class="card-text">
+          <div  id="img-number">0000 0000 0000 0000</div>
+          <div  id="img-name">Jane Appleseed</div>
+          <div  id="img-date">00/00</div>
+        </div>
+      </div>
+      <div class="back">
+        <img src="./images/bg-card-back.png" alt="card back">
+        <div id="img-cvc">000</div>
+      </div>
+    </div>
+    <form>
+      <label for="name">Cardholder Name</label>
+      <input type="text" name="name" id="name" value="e.g. Jane Appleseed">
+
+      <label for="card-number">Card Number</label>
+      <input type="text" name="card-number" id="card-number" value="e.g. 1234 5678 9123 0000">
+
+      <label for="exp-date">Exp. Date (MM/YY)</label>
+      <input type="text" class="exp-date" name="month" id="month" value="MM">
+      <input type="text" class="exp-date" name="year" id="year" value="YY">
+
+      <label for="cvc">CVC</label>
+      <input type="text" name="cvc" id="cvc" value="e.g. 123">
+
+      <button>Confirm</button>
+    </form>
+
+
+
+    <!-- Completed state start -->
+    <div class="completed", style="display: none;">
+      Thank you!
+      We've added your card details
+      Continue
+    </div>
+
+    <!--Gotta use html forms. Use css postion property to align elements properly. Use javascript for form validation.-->
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
