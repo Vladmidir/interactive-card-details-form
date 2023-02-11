@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
+  <script src="./scripts.js"></script>
+
   <title>Frontend Mentor | Interactive card details form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -39,21 +41,21 @@
         <div id="img-cvc">000</div>
       </div>
     </div>
-    <form>
+    <form name="card-form">
       <label id="name-label" for="name">Cardholder Name</label>
-      <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+      <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" onchange="changeName()">
 
       <label id="card-number-label" for="card-number">Card Number</label>
-      <input type="text" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+      <input type="text" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" onchange="changeNumber()" maxlength="19">
 
       <label id="exp-date-label" for="exp-date">Exp. Date (MM/YY)</label>
-      <input type="text" class="exp-date" name="month" id="month" placeholder="MM">
-      <input type="text" class="exp-date" name="year" id="year" placeholder="YY">
+      <input type="text" class="exp-date" name="month" id="month" placeholder="MM" onchange="changeDate()" maxlength="2">
+      <input type="text" class="exp-date" name="year" id="year" placeholder="YY" onchange="changeDate()" maxlength="2">
 
       <label id="cvc-label" for="cvc">CVC</label>
-      <input type="text" name="cvc" id="cvc" placeholder="e.g. 123">
+      <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" onchange="changeCVC()" maxlength="3">
 
-      <button id="confirm">Confirm</button>
+      <input id="confirm" type="submit" value="Confirm" >
     </form>
 
 
