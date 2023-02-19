@@ -41,30 +41,51 @@
         <div id="img-cvc">000</div>
       </div>
     </div>
-    <form name="card-form">
+    <form id="form" name="card-form">
+
       <label id="name-label" for="name">Cardholder Name</label>
-      <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" onchange="changeName()">
+      <div id="name-div">
+        <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" onchange="changeName()">
+        <span id="name-error">error</span>
+      </div>
+      
 
       <label id="card-number-label" for="card-number">Card Number</label>
-      <input type="text" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" onchange="changeNumber()" maxlength="19">
-
+      <div id="card-number-div">
+        <input type="text" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" onchange="changeNumber()" maxlength="19">
+        <span id="card-number-error">error</span>
+      </div>
+      
       <label id="exp-date-label" for="exp-date">Exp. Date (MM/YY)</label>
-      <input type="text" class="exp-date" name="month" id="month" placeholder="MM" onchange="changeDate()" maxlength="2">
-      <input type="text" class="exp-date" name="year" id="year" placeholder="YY" onchange="changeDate()" maxlength="2">
+      <div id="month-div">
+        <input type="text" class="exp-date" name="month" id="month" placeholder="MM" onchange="changeDate()" maxlength="2">
+        <span id="month-error">error</span>
+      </div>
+      <div id="year-div">
+        <input type="text" class="exp-date" name="year" id="year" placeholder="YY" onchange="changeDate()" maxlength="2">
+        <span id="year-error">error</span>
+      </div>
+      
 
       <label id="cvc-label" for="cvc">CVC</label>
-      <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" onchange="changeCVC()" maxlength="3">
+      <div id="cvc-id">
+        <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" onchange="changeCVC()" maxlength="3">
+        <span id="cvc-error">error</span>
+      </div>
+      
 
-      <input id="confirm" type="submit" value="Confirm" >
+      <input id="confirm" type="submit" value="Confirm">
     </form>
 
 
 
     <!-- Completed state start -->
-    <div class="completed", style="display: none;">
-      Thank you!
-      We've added your card details
-      Continue
+    <div id="complete" style="display: none;">
+      <img src="./images/icon-complete.svg" alt="checkmark image">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button onclick="location.reload()">Continue</button>
+      
     </div>
 
     <!--Gotta use html forms. Use css postion property to align elements properly. Use javascript for form validation.-->

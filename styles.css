@@ -88,8 +88,9 @@ main {
     text-align: right;
 }
 
-form {
+#form {
     height: 400px;
+    width: 500px;
     position: relative;
     top: 250px;
     left: 400px;
@@ -98,35 +99,38 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-    gap: 15px 0px;  
+    gap: 15px 0px;
     z-index: 1;
 }
 
-form > label {
+label {
     text-transform: uppercase;
     position: relative;
     top: 10px;  
 }
 
-form > input {
+input {
     border-radius: 10px;
     border-style: solid;
     border-color: hsl(270, 3%, 87%);
     font-size: 18px;
-    padding-left: 15px;    
+    padding-left: 15px;   
+    width: 100%;
+    height: 90%;
     
 }
 
-form > input::placeholder {
+input::placeholder {
     color: hsl(270, 3%, 87%);
 }
 
-form > input:focus {
+input:focus {
     border-style: solid;
     border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
     outline: 10px;
     border-radius: 10px;
 }
+
 
 #name-label{
     grid-row: 1;
@@ -134,7 +138,7 @@ form > input:focus {
 }
 
 
-#name {
+#name-div {
     grid-row: 2;
     grid-column: 1/4;
 }
@@ -144,7 +148,7 @@ form > input:focus {
     grid-column: 1/4;
 }
 
-#card-number {
+#card-number-div {
     grid-row: 4;
     grid-column: 1/4;
 }
@@ -159,14 +163,14 @@ form > input:focus {
     grid-column: 3;
 }
 
-#month {
+#month-div {
     grid-row: 6;
     grid-column: 1;
     width: 70px;
 
 }
 
-#year {
+#year-div {
     grid-row: 6;
     grid-column: 2;
     width: 70px;
@@ -174,7 +178,7 @@ form > input:focus {
     right: 20px
 }
 
-#cvc {
+#cvc-div {
     grid-row: 6;
     grid-column: 3;
     position: relative;
@@ -186,13 +190,55 @@ form > input:focus {
     border-radius: 10px;
     background-color: hsl(278, 68%, 11%);
     color: hsl(270, 3%, 87%);
+    width: 104%;
+    margin-top: 10px;
 }
 
+span {
+    display: none;
+    color: hsl(0, 100%, 66%);
+    font-size: 13px;
+    white-space: nowrap;
+}
 
 picture {
     position: absolute;
     max-height: 100vh;
     z-index: 0;
+}
+
+
+#complete {
+    position: relative;
+    top: 300px;
+    left: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#complete > img {
+    max-width: 100px;
+}
+
+#complete > h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+#complete > p {
+    color: hsl(279, 6%, 55%);
+    margin-top: -5px;
+}
+
+#complete > button {
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    width: 400px;
+    height: 50px;
+    margin-top: 20px;
 }
 
 .attribution {
