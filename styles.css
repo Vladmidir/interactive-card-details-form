@@ -246,7 +246,7 @@ picture {
     display: none;
 }
 
-@media (max-width: 1440px){
+@media (max-width: 1439px){
     main {
         flex-direction: column;
     }
