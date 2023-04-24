@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -13,6 +13,8 @@ body * {
 main {
     display: flex;
     flex-direction: row;
+    max-height: 100vh;
+
 }
 
 .cards {
@@ -250,19 +252,19 @@ picture {
     }
 
     #form {
-        height: 400px;
-        width: 320px;
-        position: relative;
-        top: -450px;
-        left: -35px;
+        width: 350px;
+        align-self: center;
+        top: -350px;
+        left: 0px;
         right: 0px;
         bottom: 0px;
-        margin-left: 10px;
-        margin-right: 10px;
-        transform: scale(0.75);
-        
+        transform: scale(1);
     }
     
+    form > input {
+        height: 55px
+    }
+
     #month-div {
         grid-row: 6;
         grid-column: 1;
@@ -279,7 +281,7 @@ picture {
 
     #background-image {
         max-width: 100vh;
-        object-fit: cover;
+        object-fit:contain;
     }
 
     .cards {
@@ -288,17 +290,17 @@ picture {
     }
     
     .front {
-        transform: scale(0.55);
+        transform: scale(0.65);
         position: relative;
         top: -90px;
-        left: -180px;
+        left: -160px;
     }
     
     .back {
-        transform: scale(0.55);
+        transform: scale(0.65);
         position: relative;
         top: -500px;
-        left: -220px;
+        left: -190px;
     }
     
     #card-logo {
@@ -309,35 +311,11 @@ picture {
     .card-text {
         top: 35px;
     }
-    
 
     #complete {
         position: absolute;
         left: 0;
-        transform: scale(0.7);
-    }
-    
-    #complete > img {
-        max-width: 100px;
-    }
-    
-    #complete > h1 {
-        font-size: 26px;
-        text-transform: uppercase;
-    }
-    
-    #complete > p {
-        color: hsl(279, 6%, 55%);
-        margin-top: -5px;
-    }
-    
-    #complete > button {
-        border-radius: 10px;
-        background-color: hsl(278, 68%, 11%);
-        color: hsl(270, 3%, 87%);
-        width: 400px;
-        height: 50px;
-        margin-top: 20px;
+        transform: scale(0.85);
     }
 
 }
