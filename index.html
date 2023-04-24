@@ -23,9 +23,9 @@
 <body>
   <main>
     <div class="cards">
-      <picture>
-        <source srcset="images\bg-main-desktop.png">
-        <img src="./images/bg-main-desktop.png" alt="background image">
+      <picture @media>
+        <source media="(min-width: 1440px)" srcset="images\bg-main-desktop.png">
+        <img id="background-image" src="./images/bg-main-mobile.png" alt="background image">
       </picture><!--gradient picture-->
       <div class="front">
         <img src="./images/bg-card-front.png" alt="card front">

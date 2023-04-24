@@ -29,7 +29,6 @@ function changeName() {
     if(input == ""){
         input = "Jane Applesend";
     }
-
     document.getElementById("img-name").innerText = input;
 }
 
@@ -44,16 +43,13 @@ function changeDate(){
     else if(month.length < 2){
         month = "0" + month;
     }
-
     if(year.length == 0){
         year = "00";
     }    
     else if(year.length < 2){
         year = "0" + year;
     }
-
     document.getElementById("img-date").innerText = month + "/" + year;
-    
 }
 
 function changeCVC(){
@@ -62,9 +58,9 @@ function changeCVC(){
     if(input == ""){
         input = "000"
     }
-
     document.getElementById("img-cvc").innerText = input;
 }
+
 
 window.addEventListener('load', load => {
     const form = document.getElementById("form");
@@ -75,13 +71,12 @@ window.addEventListener('load', load => {
     for (const elem of elemNames) { //create a dictionarry name to input field
         inputElems[elem] = document.getElementById(elem);
     }
-    
 
     for (const elem in inputElems){ //go through all input elements
         inputElems[elem].addEventListener('blur', event => { //reset colour to neutral after the user select the field again
+
             inputElems[elem].style.borderColor = "hsl(270, 3%, 87%)"; 
             document.getElementById(elem + "-error").style.display = "none"//hide error messages
-
 
             if (elem != 'name'){//make sure all numeric fields have numeric input
                 if (isNaN(document.forms["card-form"][elem].value.replace(/ +/g, ""))){
@@ -95,19 +90,13 @@ window.addEventListener('load', load => {
             }
             if (elem == 'month' && parseInt(document.forms["card-form"][elem].value) > 12 ){//make sure month is valid
                 showError(inputElems, elem, "Wrong month");
-
             }
         });
-
-        
-
     }
-
 
     form.addEventListener('submit', (event) => { //here I am going to do form validation for empty fields
         event.preventDefault();
         let valid = true;
-
 
         if(inputElems["cvc"].value.replace(/ +/g, "").length < 3){
             showError(inputElems, "cvc", "Too short");

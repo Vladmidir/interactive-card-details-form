@@ -21,7 +21,7 @@ main {
 }
 
 .front {
-    z-index: 1;
+    z-index: 2;
 }
 .back {
     z-index: 1;
@@ -107,6 +107,7 @@ label {
     text-transform: uppercase;
     position: relative;
     top: 10px;  
+    font-size: 16px;
 }
 
 input {
@@ -131,7 +132,6 @@ input:focus {
     border-radius: 10px;
 }
 
-
 #name-label{
     grid-row: 1;
     grid-column: 1/4;
@@ -153,7 +153,7 @@ input:focus {
     grid-column: 1/4;
 }
 
-#exp-date-label{
+#exp-date-label {
     grid-row: 5;
     grid-column: 1/3;
 }
@@ -204,9 +204,9 @@ span {
 picture {
     position: absolute;
     max-height: 100vh;
+    object-fit: fill;
     z-index: 0;
 }
-
 
 #complete {
     position: relative;
@@ -215,7 +215,6 @@ picture {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #complete > img {
@@ -243,4 +242,102 @@ picture {
 
 .attribution {
     display: none;
+}
+
+@media (max-width: 1440px){
+    main {
+        flex-direction: column;
     }
+
+    #form {
+        height: 400px;
+        width: 320px;
+        position: relative;
+        top: -450px;
+        left: -35px;
+        right: 0px;
+        bottom: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transform: scale(0.75);
+        
+    }
+    
+    #month-div {
+        grid-row: 6;
+        grid-column: 1;
+        width: 56px;
+    
+    }
+    #year-div {
+        grid-row: 6;
+        grid-column: 2;
+        width: 56px;
+        position: relative;
+        right: 0px
+    }
+
+    #background-image {
+        max-width: 100vh;
+        object-fit: cover;
+    }
+
+    .cards {
+        max-width: 100vh;
+        
+    }
+    
+    .front {
+        transform: scale(0.55);
+        position: relative;
+        top: -90px;
+        left: -180px;
+    }
+    
+    .back {
+        transform: scale(0.55);
+        position: relative;
+        top: -500px;
+        left: -220px;
+    }
+    
+    #card-logo {
+        left: 220px;   
+        top: -20px;
+    }
+    
+    .card-text {
+        top: 35px;
+    }
+    
+
+    #complete {
+        position: absolute;
+        left: 0;
+        transform: scale(0.7);
+    }
+    
+    #complete > img {
+        max-width: 100px;
+    }
+    
+    #complete > h1 {
+        font-size: 26px;
+        text-transform: uppercase;
+    }
+    
+    #complete > p {
+        color: hsl(279, 6%, 55%);
+        margin-top: -5px;
+    }
+    
+    #complete > button {
+        border-radius: 10px;
+        background-color: hsl(278, 68%, 11%);
+        color: hsl(270, 3%, 87%);
+        width: 400px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+}
