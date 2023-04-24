@@ -258,7 +258,7 @@ picture {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        transform: scale(1);
+        transform: scale(0.9);
     }
     
     form > input {
