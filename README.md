@@ -71,4 +71,4 @@ Learned how to position elements on the webpage using CSS position property
 ```
 
 ### Continued development
-In the future, I should make sure to use CSS classes to change an element's style, instead of manipulating it with js. I should make better containers
+In the future, I should make sure to use CSS classes to change an element's style, instead of manipulating it with js.
